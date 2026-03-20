@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RAIZ²</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#173F35">
+</head>
+<body>
+
+<h1>RAIZ²</h1>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
+</body>
+</html>
