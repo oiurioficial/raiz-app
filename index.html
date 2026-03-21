@@ -10,7 +10,7 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#173F35">
 
-<link rel="apple-touch-icon" href="https://i.ibb.co/hxtT2dpf/LOGORAIZ.jpg">
+<link rel="apple-touch-icon" href="https://i.ibb.co/nM1KZjmW/PNGLOGORAIZ-1.png">
 
 <style>
 html, body {
@@ -18,11 +18,21 @@ html, body {
   height: 100%;
   background: #F4F6F4;
 }
+
+/* ocupa tela inteira */
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+}
 </style>
 
 </head>
 
 <body>
+
+<!-- APP REAL (SEM REDIRECIONAMENTO) -->
+<iframe src="https://www.sistemaraiz2.com.br/p/plataforma-raiz-v2.html"></iframe>
 
 <script>
 if ("serviceWorker" in navigator) {
@@ -30,11 +40,8 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("SW OK"))
     .catch(err => console.log("Erro SW:", err));
 }
-
-// espera registrar antes de redirecionar
-setTimeout(() => {window.location.href = "/p/plataforma-raiz-v2.html";
-}, 500);
 </script>
+
 </body>
 
 </html>
