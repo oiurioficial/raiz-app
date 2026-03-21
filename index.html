@@ -24,14 +24,17 @@ html, body {
 
 <body>
 
-<script>window.location.href = "https://www.sistemaraiz2.com.br/p/plataforma-raiz-v2.html";
-</script>
 <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js")
     .then(() => console.log("SW OK"))
     .catch(err => console.log("Erro SW:", err));
 }
+
+// espera registrar antes de redirecionar
+setTimeout(() => {
+  window.location.href = "https://www.sistemaraiz2.com.br/p/plataforma-raiz-v2.html";
+}, 500);
 </script>
 </body>
 
