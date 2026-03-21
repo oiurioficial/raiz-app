@@ -1,22 +1,47 @@
-{
-  "name": "RAIZ² - Sistema de Evolução Consciente",
-  "short_name": "RAIZ²",
-  "start_url": "/p/plataforma-raiz-v2.html",
-  "scope": "/",
-  "display": "standalone",
-  "background_color": "#173F35",
-  "theme_color": "#173F35",
-  "orientation": "portrait",
-  "icons": [
-    {
-      "src": "https://i.ibb.co/nM1KZjmW/PNGLOGORAIZ-1.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://i.ibb.co/nM1KZjmW/PNGLOGORAIZ-1.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>RAIZ²</title>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#173F35">
+
+<link rel="apple-touch-icon" href="https://i.ibb.co/nM1KZjmW/PNGLOGORAIZ-1.png">
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #F4F6F4;
 }
+
+/* ocupa tela inteira */
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- APP REAL (SEM REDIRECIONAMENTO) -->
+<iframe src="https://www.sistemaraiz2.com.br/p/plataforma-raiz-v2.html"></iframe>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("SW OK"))
+    .catch(err => console.log("Erro SW:", err));
+}
+</script>
+
+</body>
+
+</html>
